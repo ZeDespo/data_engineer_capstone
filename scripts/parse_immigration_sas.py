@@ -27,8 +27,6 @@ def city_and_resident_codes(line: str) -> Dict[str, Any]:
             stack = []
             if 'INVALID' in parsed_line:
                 idx = parsed_line.index(":") + 2  # Skip the space as well
-                # country, is_valid_entry = parsed_line[idx:], False
-                # results['region'] = parsed_line[idx:]
                 parsed_line = parsed_line[idx:]
             if 'No Country Code' not in parsed_line:
                 parsed_line = ' '.join([word.lower().capitalize() for word in parsed_line.split(' ')])
